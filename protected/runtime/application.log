@@ -278,3 +278,111 @@ Stack trace:
 REQUEST_URI=/forecastingpenjualan/css/print.css
 HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/site/page?view=about
 ---
+2016/05/03 07:19:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in E:\xampp\htdocs\newyii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 E:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/forecastingpenjualan/css/screen.css
+HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/site/page?view=about
+---
+2016/05/03 07:19:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/main.css".' in E:\xampp\htdocs\newyii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 E:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/forecastingpenjualan/css/main.css
+HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/site/page?view=about
+---
+2016/05/03 07:19:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/form.css".' in E:\xampp\htdocs\newyii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 E:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/forecastingpenjualan/css/form.css
+HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/site/page?view=about
+---
+2016/05/03 07:19:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/print.css".' in E:\xampp\htdocs\newyii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 E:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/forecastingpenjualan/css/print.css
+HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/site/page?view=about
+---
+2016/05/03 07:19:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in E:\xampp\htdocs\newyii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 E:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/forecastingpenjualan/css/screen.css
+HTTP_REFERER=http://localhost/forecastingpenjualan/
+---
+2016/05/03 07:19:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/main.css".' in E:\xampp\htdocs\newyii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 E:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/forecastingpenjualan/css/main.css
+HTTP_REFERER=http://localhost/forecastingpenjualan/
+---
+2016/05/03 07:19:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/form.css".' in E:\xampp\htdocs\newyii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 E:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/forecastingpenjualan/css/form.css
+HTTP_REFERER=http://localhost/forecastingpenjualan/
+---
+2016/05/03 07:19:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/print.css".' in E:\xampp\htdocs\newyii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 E:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/forecastingpenjualan/css/print.css
+HTTP_REFERER=http://localhost/forecastingpenjualan/
+---
+2016/05/03 07:19:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in E:\xampp\htdocs\newyii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 E:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/forecastingpenjualan/css/screen.css
+HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/site/page?view=about
+---
+2016/05/03 07:19:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/main.css".' in E:\xampp\htdocs\newyii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 E:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/forecastingpenjualan/css/main.css
+HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/site/page?view=about
+---
+2016/05/03 07:19:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/form.css".' in E:\xampp\htdocs\newyii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 E:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/forecastingpenjualan/css/form.css
+HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/site/page?view=about
+---
+2016/05/03 07:19:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/print.css".' in E:\xampp\htdocs\newyii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 E:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/forecastingpenjualan/css/print.css
+HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/site/page?view=about
+---
