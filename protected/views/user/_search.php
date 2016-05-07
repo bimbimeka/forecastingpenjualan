@@ -23,7 +23,17 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'username',array('size'=>50,'maxlength'=>50)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'nama'); ?>
+		<?php echo $form->textField($model,'nama',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'level'); ?>
+		<?php echo $form->textField($model,'level'); ?>
 	</div>
 
 	<div class="row buttons">

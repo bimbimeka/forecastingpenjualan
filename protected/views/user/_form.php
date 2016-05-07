@@ -26,15 +26,27 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'password'); ?>
+		<?php echo $form->labelEx($model,'username'); ?>
+		<?php echo $form->textField($model,'username',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'username'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'username'); ?>
+		<?php echo $form->labelEx($model,'nama'); ?>
+		<?php echo $form->textField($model,'nama',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'nama'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'level'); ?>
+		<?php echo $form->textField($model,'level'); ?>
+		<?php echo $form->error($model,'level'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'password'); ?>
+		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'password'); ?>
 	</div>
 
 	<div class="row buttons">
