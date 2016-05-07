@@ -8,8 +8,8 @@
  * @property integer $user_id
  * @property string $username
  * @property string $nama
- * @property integer $level
  * @property string $password
+ * @property string $level
  */
 class User extends CActiveRecord
 {
@@ -30,12 +30,13 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('username', 'required'),
-			array('user_id, level', 'numerical', 'integerOnly'=>true),
+			array('user_id', 'numerical', 'integerOnly'=>true),
 			array('username', 'length', 'max'=>50),
 			array('nama, password', 'length', 'max'=>255),
+			array('level', 'length', 'max'=>13),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, user_id, username, nama, level, password', 'safe', 'on'=>'search'),
+			array('id, user_id, username, nama, password, level', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,8 +61,8 @@ class User extends CActiveRecord
 			'user_id' => 'User',
 			'username' => 'Username',
 			'nama' => 'Nama',
-			'level' => 'Level',
 			'password' => 'Password',
+			'level' => 'Level',
 		);
 	}
 
@@ -87,8 +88,8 @@ class User extends CActiveRecord
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('nama',$this->nama,true);
-		$criteria->compare('level',$this->level);
 		$criteria->compare('password',$this->password,true);
+		$criteria->compare('level',$this->level,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
