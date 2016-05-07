@@ -26,5 +26,9 @@ $this->menu=array(
 		'id_order_masuk',
 		'qty_awal',
 		'qty_akhir',
+		'c_at',
+		'u_at',
+		'c_by',
+		'u_by',
 	),
 )); ?>

@@ -19,7 +19,7 @@
  * @property string $u_by
  * @property string $status
  */
-class Barang extends CActiveRecord
+class Barang extends ParentModels
 {
 	/**
 	 * @return string the associated database table name

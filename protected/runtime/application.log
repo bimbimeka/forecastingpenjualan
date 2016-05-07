@@ -475,6 +475,7 @@ Stack trace:
 REQUEST_URI=/forecastingpenjualan/index.php/user/admin
 HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/user/7
 ---
+<<<<<<< HEAD
 2016/05/07 12:27:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in E:\xampp\htdocs\newyii\framework\web\auth\CAccessControlFilter.php:182
 Stack trace:
 #0 E:\xampp\htdocs\newyii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
@@ -491,4 +492,30 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/forecastingpenjualan/index.php/user/admin
 HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/user
+=======
+2016/05/07 12:47:14 [error] [exception.CException] exception 'CException' with message 'Barang and its behaviors do not have a method or closure named "getOwner".' in C:\xampp\htdocs\newyii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getOwner', Array)
+#1 C:\xampp\htdocs\forecastingpenjualan\protected\components\ParentModels.php(18): CActiveRecord->__call('getOwner', Array)
+#2 C:\xampp\htdocs\forecastingpenjualan\protected\components\ParentModels.php(18): Barang->getOwner()
+#3 C:\xampp\htdocs\newyii\framework\db\ar\CActiveRecord.php(1074): ParentModels->beforeSave()
+#4 C:\xampp\htdocs\newyii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#5 C:\xampp\htdocs\forecastingpenjualan\protected\controllers\BarangController.php(73): CActiveRecord->save()
+#6 C:\xampp\htdocs\newyii\framework\web\actions\CInlineAction.php(49): BarangController->actionCreate()
+#7 C:\xampp\htdocs\newyii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\newyii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\newyii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\newyii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\newyii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\newyii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\newyii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\newyii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\newyii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('barang/create')
+#17 C:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/forecastingpenjualan/index.php/barang/create
+HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/barang/create
+>>>>>>> origin/master
 ---
