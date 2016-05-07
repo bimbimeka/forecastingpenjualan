@@ -417,3 +417,56 @@ Stack trace:
 REQUEST_URI=/forecastingpenjualan/index.php/barang/admin
 HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/site/login
 ---
+2016/05/07 11:51:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'forecasting_penjualan'' in C:\xampp\htdocs\newyii\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\xampp\htdocs\newyii\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\xampp\htdocs\newyii\framework\cli\commands\MigrateCommand.php(472): CModule->getComponent('db')
+#4 C:\xampp\htdocs\newyii\framework\cli\commands\MigrateCommand.php(481): MigrateCommand->getDbConnection()
+#5 C:\xampp\htdocs\newyii\framework\cli\commands\MigrateCommand.php(512): MigrateCommand->getMigrationHistory(-1)
+#6 C:\xampp\htdocs\newyii\framework\cli\commands\MigrateCommand.php(84): MigrateCommand->getNewMigrations()
+#7 [internal function]: MigrateCommand->actionUp(Array)
+#8 C:\xampp\htdocs\newyii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#9 C:\xampp\htdocs\newyii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#10 C:\xampp\htdocs\newyii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 C:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CConsoleApplication->processRequest()
+#12 C:\xampp\htdocs\newyii\framework\yiic.php(33): CApplication->run()
+#13 C:\xampp\htdocs\forecastingpenjualan\protected\yiic.php(7): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+---
+2016/05/07 11:55:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forecasting_penjualan.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2016/05/07 12:01:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forecasting_penjualan.forecasting_penjualan' doesn't exist. The SQL statement executed was: ALTER TABLE `forecasting_penjualan` ADD `nama` varchar(255) AFTER `username`.
+2016/05/07 12:01:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forecasting_penjualan.forecasting_penjualan' doesn't exist. The SQL statement executed was: ALTER TABLE `forecasting_penjualan` ADD `nama` varchar(255) AFTER `username`' in C:\xampp\htdocs\newyii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\db\CDbCommand.php(1405): CDbCommand->execute()
+#1 C:\xampp\htdocs\newyii\framework\db\CDbMigration.php(303): CDbCommand->addColumn('forecasting_pen...', 'nama', 'string AFTER `u...')
+#2 C:\xampp\htdocs\forecastingpenjualan\protected\migrations\m160507_095751_alter_column_user.php(7): CDbMigration->addColumn('forecasting_pen...', 'nama', 'string AFTER `u...')
+#3 C:\xampp\htdocs\newyii\framework\cli\commands\MigrateCommand.php(415): m160507_095751_alter_column_user->up()
+#4 C:\xampp\htdocs\newyii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m160507_095751_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\xampp\htdocs\newyii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\xampp\htdocs\newyii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\xampp\htdocs\newyii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CConsoleApplication->processRequest()
+#10 C:\xampp\htdocs\newyii\framework\yiic.php(33): CApplication->run()
+#11 C:\xampp\htdocs\forecastingpenjualan\protected\yiic.php(7): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+---
+2016/05/07 12:02:13 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forecasting_penjualan.forecasting_penjualan' doesn't exist. The SQL statement executed was: ALTER TABLE `forecasting_penjualan` ADD `nama` varchar(255) AFTER username.
+2016/05/07 12:02:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'forecasting_penjualan.forecasting_penjualan' doesn't exist. The SQL statement executed was: ALTER TABLE `forecasting_penjualan` ADD `nama` varchar(255) AFTER username' in C:\xampp\htdocs\newyii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\db\CDbCommand.php(1405): CDbCommand->execute()
+#1 C:\xampp\htdocs\newyii\framework\db\CDbMigration.php(303): CDbCommand->addColumn('forecasting_pen...', 'nama', 'string AFTER us...')
+#2 C:\xampp\htdocs\forecastingpenjualan\protected\migrations\m160507_095751_alter_column_user.php(7): CDbMigration->addColumn('forecasting_pen...', 'nama', 'string AFTER us...')
+#3 C:\xampp\htdocs\newyii\framework\cli\commands\MigrateCommand.php(415): m160507_095751_alter_column_user->up()
+#4 C:\xampp\htdocs\newyii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m160507_095751_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\xampp\htdocs\newyii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\xampp\htdocs\newyii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\xampp\htdocs\newyii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CConsoleApplication->processRequest()
+#10 C:\xampp\htdocs\newyii\framework\yiic.php(33): CApplication->run()
+#11 C:\xampp\htdocs\forecastingpenjualan\protected\yiic.php(7): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+---
