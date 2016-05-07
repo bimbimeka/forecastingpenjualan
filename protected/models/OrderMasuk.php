@@ -15,8 +15,12 @@
  * @property double $total_sablon
  * @property double $total_jahit
  * @property double $total_all
+ * @property string $c_at
+ * @property string $u_at
+ * @property integer $c_by
+ * @property integer $u_by
  */
-class OrderMasuk extends CActiveRecord
+class OrderMasuk extends ParentModels
 {
 	/**
 	 * @return string the associated database table name
@@ -34,13 +38,13 @@ class OrderMasuk extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_barang, qty, id_sablon, id_jahit', 'numerical', 'integerOnly'=>true),
+			array('id_barang, qty, id_sablon, id_jahit, c_by, u_by', 'numerical', 'integerOnly'=>true),
 			array('harga_bahan, total_sablon, total_jahit, total_all', 'numerical'),
 			array('nama', 'length', 'max'=>255),
-			array('tanggal_order', 'safe'),
+			array('tanggal_order, c_at, u_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, tanggal_order, nama, id_barang, qty, harga_bahan, id_sablon, id_jahit, total_sablon, total_jahit, total_all', 'safe', 'on'=>'search'),
+			array('id, tanggal_order, nama, id_barang, qty, harga_bahan, id_sablon, id_jahit, total_sablon, total_jahit, total_all, c_at, u_at, c_by, u_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,6 +76,10 @@ class OrderMasuk extends CActiveRecord
 			'total_sablon' => 'Total Sablon',
 			'total_jahit' => 'Total Jahit',
 			'total_all' => 'Total All',
+			'c_at' => 'C At',
+			'u_at' => 'U At',
+			'c_by' => 'C By',
+			'u_by' => 'U By',
 		);
 	}
 
@@ -104,6 +112,10 @@ class OrderMasuk extends CActiveRecord
 		$criteria->compare('total_sablon',$this->total_sablon);
 		$criteria->compare('total_jahit',$this->total_jahit);
 		$criteria->compare('total_all',$this->total_all);
+		$criteria->compare('c_at',$this->c_at,true);
+		$criteria->compare('u_at',$this->u_at,true);
+		$criteria->compare('c_by',$this->c_by);
+		$criteria->compare('u_by',$this->u_by);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

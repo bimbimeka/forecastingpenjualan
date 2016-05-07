@@ -36,6 +36,26 @@
 		<?php echo $form->textField($model,'qty_akhir'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'c_at'); ?>
+		<?php echo $form->textField($model,'c_at'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'u_at'); ?>
+		<?php echo $form->textField($model,'u_at'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'c_by'); ?>
+		<?php echo $form->textField($model,'c_by'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'u_by'); ?>
+		<?php echo $form->textField($model,'u_by'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

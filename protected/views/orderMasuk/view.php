@@ -32,5 +32,9 @@ $this->menu=array(
 		'total_sablon',
 		'total_jahit',
 		'total_all',
+		'c_at',
+		'u_at',
+		'c_by',
+		'u_by',
 	),
 )); ?>

@@ -12,5 +12,17 @@
  * @author rudysof
  */
 class ParentModels extends CActiveRecord {
-    //put your code here
+    
+    public function beforeSave()
+    {
+        if ($this->isNewRecord) {
+            $this->c_at = new CDbExpression('UTC_TIMESTAMP()');
+            $this->c_by = Yii::app()->user->id;
+        }else {
+            $this->u_at = new CDbExpression('UTC_TIMESTAMP()');
+            $this->u_at = Yii::app()->user->id;
+        }
+        
+        return parent::beforeSave();
+    }
 }

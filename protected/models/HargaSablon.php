@@ -17,7 +17,7 @@
  * @property string $u_by
  * @property string $status
  */
-class HargaSablon extends CActiveRecord
+class HargaSablon extends ParentModels
 {
 	/**
 	 * @return string the associated database table name

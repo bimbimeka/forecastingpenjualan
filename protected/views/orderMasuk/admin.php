@@ -57,6 +57,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'total_sablon',
 		'total_jahit',
 		'total_all',
+		'c_at',
+		'u_at',
+		'c_by',
+		'u_by',
 		*/
 		array(
 			'class'=>'CButtonColumn',

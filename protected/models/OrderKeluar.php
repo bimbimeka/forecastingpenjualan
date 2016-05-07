@@ -9,6 +9,10 @@
  * @property integer $id_order_masuk
  * @property integer $qty_awal
  * @property integer $qty_akhir
+ * @property string $c_at
+ * @property string $u_at
+ * @property integer $c_by
+ * @property integer $u_by
  */
 class OrderKeluar extends CActiveRecord
 {
@@ -28,11 +32,11 @@ class OrderKeluar extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_order_masuk, qty_awal, qty_akhir', 'numerical', 'integerOnly'=>true),
-			array('tanggal_order', 'safe'),
+			array('id_order_masuk, qty_awal, qty_akhir, c_by, u_by', 'numerical', 'integerOnly'=>true),
+			array('tanggal_order, c_at, u_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, tanggal_order, id_order_masuk, qty_awal, qty_akhir', 'safe', 'on'=>'search'),
+			array('id, tanggal_order, id_order_masuk, qty_awal, qty_akhir, c_at, u_at, c_by, u_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,6 +62,10 @@ class OrderKeluar extends CActiveRecord
 			'id_order_masuk' => 'Id Order Masuk',
 			'qty_awal' => 'Qty Awal',
 			'qty_akhir' => 'Qty Akhir',
+			'c_at' => 'C At',
+			'u_at' => 'U At',
+			'c_by' => 'C By',
+			'u_by' => 'U By',
 		);
 	}
 
@@ -84,6 +92,10 @@ class OrderKeluar extends CActiveRecord
 		$criteria->compare('id_order_masuk',$this->id_order_masuk);
 		$criteria->compare('qty_awal',$this->qty_awal);
 		$criteria->compare('qty_akhir',$this->qty_akhir);
+		$criteria->compare('c_at',$this->c_at,true);
+		$criteria->compare('u_at',$this->u_at,true);
+		$criteria->compare('c_by',$this->c_by);
+		$criteria->compare('u_by',$this->u_by);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

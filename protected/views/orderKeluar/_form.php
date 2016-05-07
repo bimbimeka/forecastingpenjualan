@@ -43,6 +43,30 @@
 		<?php echo $form->error($model,'qty_akhir'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'c_at'); ?>
+		<?php echo $form->textField($model,'c_at'); ?>
+		<?php echo $form->error($model,'c_at'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'u_at'); ?>
+		<?php echo $form->textField($model,'u_at'); ?>
+		<?php echo $form->error($model,'u_at'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'c_by'); ?>
+		<?php echo $form->textField($model,'c_by'); ?>
+		<?php echo $form->error($model,'c_by'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'u_by'); ?>
+		<?php echo $form->textField($model,'u_by'); ?>
+		<?php echo $form->error($model,'u_by'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

@@ -25,5 +25,23 @@
 	<?php echo CHtml::encode($data->qty_akhir); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('c_at')); ?>:</b>
+	<?php echo CHtml::encode($data->c_at); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('u_at')); ?>:</b>
+	<?php echo CHtml::encode($data->u_at); ?>
+	<br />
+
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('c_by')); ?>:</b>
+	<?php echo CHtml::encode($data->c_by); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('u_by')); ?>:</b>
+	<?php echo CHtml::encode($data->u_by); ?>
+	<br />
+
+	*/ ?>
 
 </div>
