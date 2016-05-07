@@ -14,7 +14,7 @@
  * @property integer $c_by
  * @property integer $u_by
  */
-class OrderKeluar extends CActiveRecord
+class OrderKeluar extends ParentModels
 {
 	/**
 	 * @return string the associated database table name
