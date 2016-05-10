@@ -571,3 +571,218 @@ Stack trace:
 REQUEST_URI=/forecastingpenjualan/index.php/user/admin
 HTTP_REFERER=http://localhost/forecastingpenjualan/index.php/user/index
 ---
+2016/05/07 18:10:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in C:\xampp\htdocs\newyii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('index')
+#1 C:\xampp\htdocs\newyii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\xampp\htdocs\newyii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\newyii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\newyii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\newyii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/forecastingpenjualan/site/page?view=index
+---
+2016/05/07 18:10:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "index" was not found.' in C:\xampp\htdocs\newyii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('index')
+#1 C:\xampp\htdocs\newyii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\xampp\htdocs\newyii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\newyii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\newyii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\newyii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/forecastingpenjualan/site/page?view
+---
+2016/05/07 18:15:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\newyii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\newyii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\newyii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\newyii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\newyii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\newyii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\newyii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\newyii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/forecastingpenjualan/user/admin
+HTTP_REFERER=http://localhost/forecastingpenjualan/user/index
+---
+2016/05/10 13:40:41 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\newyii\framework\YiiBase.php:323
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 C:\xampp\htdocs\newyii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(530): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\newyii\framework\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\newyii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\newyii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\forecastingpenjualan\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/forecastingpenjualan/site/login
+---
+2016/05/10 13:44:19 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\newyii\framework\YiiBase.php:323
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 C:\xampp\htdocs\newyii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(530): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\newyii\framework\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\newyii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\newyii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\forecastingpenjualan\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/forecastingpenjualan/
+---
+2016/05/10 13:44:54 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\newyii\framework\YiiBase.php:323
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 C:\xampp\htdocs\newyii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(530): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\newyii\framework\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\newyii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\newyii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\forecastingpenjualan\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/forecastingpenjualan/index.php?r=gii
+---
+2016/05/10 13:45:37 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\newyii\framework\YiiBase.php:323
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 C:\xampp\htdocs\newyii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(530): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\newyii\framework\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\newyii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\newyii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\forecastingpenjualan\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/forecastingpenjualan/index.php?r=gii
+---
+2016/05/10 13:45:47 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\newyii\framework\YiiBase.php:323
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 C:\xampp\htdocs\newyii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(530): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\newyii\framework\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\newyii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\newyii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\forecastingpenjualan\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/forecastingpenjualan/index.php?r=gii
+---
+2016/05/10 13:49:35 [error] [exception.CException] exception 'CException' with message 'Alias "extensions.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing directory or file.' in C:\xampp\htdocs\newyii\framework\YiiBase.php:348
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\YiiBase.php(196): YiiBase::import('extensions.boot...', true)
+#1 C:\xampp\htdocs\newyii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(530): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\newyii\framework\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\newyii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\newyii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\forecastingpenjualan\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/forecastingpenjualan/index.php?r=gii
+---
+2016/05/10 13:49:43 [error] [exception.CException] exception 'CException' with message 'Alias "extension.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing directory or file.' in C:\xampp\htdocs\newyii\framework\YiiBase.php:348
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\YiiBase.php(196): YiiBase::import('extension.boots...', true)
+#1 C:\xampp\htdocs\newyii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(530): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\newyii\framework\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\newyii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\newyii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\forecastingpenjualan\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/forecastingpenjualan/index.php?r=gii
+---
+2016/05/10 13:49:54 [error] [exception.CException] exception 'CException' with message 'Alias "ext.bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\newyii\framework\YiiBase.php:323
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\YiiBase.php(196): YiiBase::import('ext.bootstrap.c...', true)
+#1 C:\xampp\htdocs\newyii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(530): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\newyii\framework\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\newyii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\newyii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\forecastingpenjualan\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/forecastingpenjualan/index.php?r=gii
+---
+2016/05/10 13:52:38 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\newyii\framework\YiiBase.php:323
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\YiiBase.php(196): YiiBase::import('bootstrap.compo...', true)
+#1 C:\xampp\htdocs\newyii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(530): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\newyii\framework\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\newyii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\newyii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\forecastingpenjualan\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/forecastingpenjualan/index.php?r=gii
+---
+2016/05/10 13:52:43 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\newyii\framework\YiiBase.php:323
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\YiiBase.php(196): YiiBase::import('bootstrap.compo...', true)
+#1 C:\xampp\htdocs\newyii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(530): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\newyii\framework\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\newyii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\newyii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\forecastingpenjualan\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/forecastingpenjualan/index.php?r=gii
+---
+2016/05/10 13:54:20 [error] [exception.CException] exception 'CException' with message 'Alias "components.Bootstrap" is invalid. Make sure it points to an existing directory or file.' in C:\xampp\htdocs\newyii\framework\YiiBase.php:348
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\YiiBase.php(196): YiiBase::import('components.Boot...', true)
+#1 C:\xampp\htdocs\newyii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(530): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\newyii\framework\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\newyii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\newyii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\forecastingpenjualan\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/forecastingpenjualan/index.php?r=gii
+---
+2016/05/10 13:54:34 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\newyii\framework\YiiBase.php:323
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\YiiBase.php(196): YiiBase::import('bootstrap.compo...', true)
+#1 C:\xampp\htdocs\newyii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(530): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\newyii\framework\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\newyii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\newyii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\forecastingpenjualan\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/forecastingpenjualan/index.php?r=gii
+---
+2016/05/10 13:58:19 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.components.Bootstrap" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\newyii\framework\YiiBase.php:323
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\YiiBase.php(196): YiiBase::import('bootstrap.compo...', true)
+#1 C:\xampp\htdocs\newyii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\newyii\framework\base\CModule.php(530): CModule->getComponent('bootstrap')
+#3 C:\xampp\htdocs\newyii\framework\base\CApplication.php(168): CModule->preloadComponents()
+#4 C:\xampp\htdocs\newyii\framework\YiiBase.php(125): CApplication->__construct('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\newyii\framework\YiiBase.php(98): YiiBase::createApplication('CWebApplication', 'C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\forecastingpenjualan\index.php(13): YiiBase::createWebApplication('C:\\xampp\\htdocs...')
+#7 {main}
+REQUEST_URI=/forecastingpenjualan/index.php?r=gii
+---
+2016/05/10 14:01:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "gii" was not found.' in C:\xampp\htdocs\newyii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\xampp\htdocs\newyii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('gii')
+#1 C:\xampp\htdocs\newyii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\xampp\htdocs\newyii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\newyii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\newyii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\newyii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/forecastingpenjualan/site/page?view=gii
+---
