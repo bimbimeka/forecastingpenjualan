@@ -4,7 +4,10 @@
 /* @var $form CActiveForm */
 ?>
 
+
 <div class="form">
+
+
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'barang-form',
@@ -67,35 +70,6 @@
 		<?php echo $form->error($model,'stock_akhir'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'c_at'); ?>
-		<?php echo $form->textField($model,'c_at'); ?>
-		<?php echo $form->error($model,'c_at'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'c_by'); ?>
-		<?php echo $form->textField($model,'c_by',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'c_by'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'u_at'); ?>
-		<?php echo $form->textField($model,'u_at'); ?>
-		<?php echo $form->error($model,'u_at'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'u_by'); ?>
-		<?php echo $form->textField($model,'u_by',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'u_by'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'status'); ?>
-	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

@@ -22,6 +22,7 @@ class UserIdentity extends CUserIdentity
         if (isset($user)){
             if($pass === $user->password){
                 $this->setState('id', $user->id);
+                $this->setState('_level', $user->level);
                
                 $this->errorCode=self::ERROR_NONE;            
             }else{

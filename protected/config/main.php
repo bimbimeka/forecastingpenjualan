@@ -24,6 +24,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'bootstrap.helpers.*',
 		
 	),
 
@@ -31,6 +32,7 @@ return array(
 		// bootstrap
 			'generatorPaths'=>array(
 				'bootstrap.gii',
+				
 			),
 		
 		'gii'=>array(
@@ -52,6 +54,7 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+			'class'=>'EWebUser',
 		),
 		
 		//bootstrap

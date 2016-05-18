@@ -20,10 +20,30 @@
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
                 array('label'=>'Home', 'url'=>array('/site/index')),
-                array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-                array('label'=>'Contact', 'url'=>array('/site/contact')),
-                array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'User', 'url'=>array('/user/index'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>' Data ',
+					'items'=>array(
+						array('label'=>'Barang', 'url'=>array('/barang/admin')),
+						array('label'=>'Sablon', 'url'=>array('/hargasablon/admin')),
+						array('label'=>'Jahit', 'url'=>array('/hargajahit/admin')),
+						
+						),
+					),
+				array('label'=>' Transaksi ',
+					'items'=>array(
+						array('label'=>'Order Masuk', 'url'=>array('/ordermasuk/admin')),
+						array('label'=>'Order Keluar', 'url'=>array('/orderkeluar/admin')),						
+						),
+					),
+				array('label'=>' Laporan ',
+					'items'=>array(
+						array('label'=>'Stok Barang', 'url'=>array('')),
+						array('label'=>'Penjualan', 'url'=>array('')),	
+						array('label'=>'Peramalan', 'url'=>array('')),
+						),
+					),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
             ),
         ),
     ),

@@ -30,6 +30,7 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('username', 'required'),
+			array('username', 'unique'),
 			array('user_id', 'numerical', 'integerOnly'=>true),
 			array('username', 'length', 'max'=>50),
 			array('nama, password', 'length', 'max'=>255),
