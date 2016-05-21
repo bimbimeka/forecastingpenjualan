@@ -5,6 +5,7 @@
  *
  * The followings are the available columns in table 'harga_sablon':
  * @property integer $id
+ * @property string $nama
  * @property double $ongkos
  * @property double $cat
  * @property double $listrik
@@ -35,8 +36,9 @@ class HargaSablon extends ParentModels
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+                        array('nama,ongkos, cat, listrik, makan, press, dll', 'required'),
 			array('ongkos, cat, listrik, makan, press, dll', 'numerical'),
-			array('c_by, u_by, status', 'length', 'max'=>255),
+			array('nama, c_by, u_by, status', 'length', 'max'=>255),
 			array('c_at, u_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -62,6 +64,7 @@ class HargaSablon extends ParentModels
 	{
 		return array(
 			'id' => 'ID',
+                        'nama' => 'Nama',
 			'ongkos' => 'Ongkos',
 			'cat' => 'Cat',
 			'listrik' => 'Listrik',
@@ -122,4 +125,13 @@ class HargaSablon extends ParentModels
 	{
 		return parent::model($className);
 	}
+        
+        public function sumField($id) {
+            $sablon = $this->find("id = $id");
+            
+            $total = $sablon->ongkos + $sablon->cat + $sablon->listrik + $sablon->makan +
+                    $sablon->press + $sablon->dll;
+            return $total;
+                    
+        }
 }

@@ -19,6 +19,7 @@
  * @property string $u_at
  * @property integer $c_by
  * @property integer $u_by
+ * @property double $harga
  */
 class OrderMasuk extends ParentModels
 {
@@ -39,7 +40,7 @@ class OrderMasuk extends ParentModels
 		// will receive user inputs.
 		return array(
 			array('id_barang, qty, id_sablon, id_jahit, c_by, u_by', 'numerical', 'integerOnly'=>true),
-			array('harga_bahan, total_sablon, total_jahit, total_all', 'numerical'),
+			array('harga, harga_bahan, total_sablon, total_jahit, total_all', 'numerical'),
 			array('nama', 'length', 'max'=>255),
 			array('tanggal_order, c_at, u_at', 'safe'),
 			// The following rule is used by search().
@@ -70,6 +71,7 @@ class OrderMasuk extends ParentModels
 			'nama' => 'Nama',
 			'id_barang' => 'Id Barang',
 			'qty' => 'Qty',
+			'harga' => 'Harga',
 			'harga_bahan' => 'Harga Bahan',
 			'id_sablon' => 'Id Sablon',
 			'id_jahit' => 'Id Jahit',
