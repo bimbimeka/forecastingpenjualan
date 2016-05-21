@@ -37,6 +37,7 @@ class HargaJahit extends ParentModels
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+                        array('ongkos, potong, steam, plastik, gas, listrik, makan, benang', 'required'),
 			array('ongkos, potong, steam, plastik, gas, listrik, makan, benang', 'numerical'),
 			array('c_by, u_by, status', 'length', 'max'=>255),
 			array('c_at, u_at', 'safe'),
@@ -128,4 +129,14 @@ class HargaJahit extends ParentModels
 	{
 		return parent::model($className);
 	}
+        
+        public function sumField($id) {
+            $jahit = $this->find("id = $id");
+            
+            $total = $jahit->ongkos + $jahit->potong + $jahit->steam + $jahit->plastik +
+                    $jahit->gas + $jahit->listrik + $jahit->makan + $jahit->benang;
+            
+            return $total;
+                    
+        }
 }

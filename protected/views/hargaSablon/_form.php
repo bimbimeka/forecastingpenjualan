@@ -18,7 +18,13 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
+        
+        <div class="row">
+		<?php echo $form->labelEx($model,'nama'); ?>
+		<?php echo $form->textField($model,'nama'); ?>
+		<?php echo $form->error($model,'nama'); ?>
+	</div>
+        
 	<div class="row">
 		<?php echo $form->labelEx($model,'ongkos'); ?>
 		<?php echo $form->textField($model,'ongkos'); ?>
@@ -53,36 +59,6 @@
 		<?php echo $form->labelEx($model,'dll'); ?>
 		<?php echo $form->textField($model,'dll'); ?>
 		<?php echo $form->error($model,'dll'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'c_at'); ?>
-		<?php echo $form->textField($model,'c_at'); ?>
-		<?php echo $form->error($model,'c_at'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'c_by'); ?>
-		<?php echo $form->textField($model,'c_by',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'c_by'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'u_at'); ?>
-		<?php echo $form->textField($model,'u_at'); ?>
-		<?php echo $form->error($model,'u_at'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'u_by'); ?>
-		<?php echo $form->textField($model,'u_by',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'u_by'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'status'); ?>
 	</div>
 
 	<div class="row buttons">

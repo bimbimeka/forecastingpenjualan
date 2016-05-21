@@ -37,8 +37,8 @@ class Barang extends ParentModels
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('barcode, stock_awal, bm, bk, stock_akhir', 'numerical', 'integerOnly'=>true),
-			array('jenis, artikel, size, c_by, u_by, status', 'length', 'max'=>255),
+			array('stock_awal, bm, bk, stock_akhir', 'numerical', 'integerOnly'=>true),
+			array('barcode, jenis, artikel, size, c_by, u_by, status', 'length', 'max'=>255),
 			array('c_at, u_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

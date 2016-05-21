@@ -44,9 +44,15 @@ class HargaJahitController extends ParentControllers
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['HargaJahit']))
-		{
+		{   
+                        $jahit = HargaJahit::model()->findAll("status = 'Aktif'");
+                        if($jahit) {
+                            $jahit->status = 'Non Aktif';
+                            $jahit->save();
+                        }
 			$model->attributes=$_POST['HargaJahit'];
-			if($model->save())
+			$model->status = 'Aktif';
+                        if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
 

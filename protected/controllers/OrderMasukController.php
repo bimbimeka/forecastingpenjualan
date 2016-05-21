@@ -38,14 +38,25 @@ class OrderMasukController extends ParentControllers
 	public function actionCreate()
 	{
 		$model=new OrderMasuk;
-
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['OrderMasuk']))
 		{
 			$model->attributes=$_POST['OrderMasuk'];
-			if($model->save())
+			$jahit = new HargaJahit();
+                        $sablon = new HargaSablon();
+                        
+                        $hargaJahit = HargaJahit::model()->find("status = 'Aktif'");
+                        $totalJahit = $jahit->sumField($hargaJahit->id);
+                        $totalSablon = $sablon->sumField($model->id_sablon);
+                        
+                        $model->tanggal_order = date('Y-m-d');
+                        $model->total_jahit = $totalJahit;
+                        $model->total_sablon = $totalSablon;
+                        
+                        $model->total_all = $model->harga * $model->qty;
+                        if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
 

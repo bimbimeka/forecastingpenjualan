@@ -46,6 +46,7 @@ class HargaSablonController extends ParentControllers
 		if(isset($_POST['HargaSablon']))
 		{
 			$model->attributes=$_POST['HargaSablon'];
+                        $model->status = 'Aktif';
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
