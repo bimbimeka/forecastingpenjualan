@@ -1533,3 +1533,31 @@ Stack trace:
 REQUEST_URI=/forecastingpenjualan/barang/barang/create
 HTTP_REFERER=http://localhost/forecastingpenjualan/barang/admin
 ---
+2016/05/21 16:54:16 [error] [exception.CException] exception 'CException' with message 'Property "CGridView.type" is not defined.' in E:\xampp\htdocs\newyii\framework\base\CComponent.php:173
+Stack trace:
+#0 E:\xampp\htdocs\newyii\framework\web\CWidgetFactory.php(161): CComponent->__set('type', 'striped')
+#1 E:\xampp\htdocs\newyii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(HargaJahitController), 'zii.widgets.gri...', Array)
+#2 E:\xampp\htdocs\newyii\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 E:\xampp\htdocs\forecastingpenjualan\protected\views\hargaJahit\admin.php(66): CBaseController->widget('zii.widgets.gri...', Array)
+#4 E:\xampp\htdocs\newyii\framework\web\CBaseController.php(126): require('E:\\xampp\\htdocs...')
+#5 E:\xampp\htdocs\newyii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\\xampp\\htdocs...', Array, true)
+#6 E:\xampp\htdocs\newyii\framework\web\CController.php(869): CBaseController->renderFile('E:\\xampp\\htdocs...', Array, true)
+#7 E:\xampp\htdocs\newyii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 E:\xampp\htdocs\forecastingpenjualan\protected\controllers\HargaJahitController.php(119): CController->render('admin', Array)
+#9 E:\xampp\htdocs\newyii\framework\web\actions\CInlineAction.php(49): HargaJahitController->actionAdmin()
+#10 E:\xampp\htdocs\newyii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 E:\xampp\htdocs\newyii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 E:\xampp\htdocs\newyii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 E:\xampp\htdocs\newyii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 E:\xampp\htdocs\newyii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 E:\xampp\htdocs\newyii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 E:\xampp\htdocs\newyii\framework\web\CController.php(291): CFilterChain->run()
+#17 E:\xampp\htdocs\newyii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 E:\xampp\htdocs\newyii\framework\web\CWebApplication.php(141): CWebApplication->runController('hargajahit/admi...')
+#20 E:\xampp\htdocs\newyii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 E:\xampp\htdocs\forecastingpenjualan\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/forecastingpenjualan/hargajahit/admin
+HTTP_REFERER=http://localhost/forecastingpenjualan/barang/admin
+---

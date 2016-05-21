@@ -21,7 +21,7 @@
             'items'=>array(
                 array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'User', 'url'=>array('/user/index'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'User', 'url'=>array('/user/admin'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>' Data ',
 					'items'=>array(
 						array('label'=>'Barang', 'url'=>array('/barang/admin')),
