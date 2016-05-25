@@ -23,6 +23,18 @@ class BarangController extends ParentControllers
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
+	 
+	public function actions() 
+	{
+		return array(
+			'getRowForm' => array(
+				'class' => 'ext.DynamicTabularForm.actions.GetRowForm',
+				'view' => '_detail_form',
+				'modelClass' => 'Detail'
+			),
+		);
+	}
+	
 	public function actionView($id)
 	{
 		$this->render('view',array(
@@ -36,21 +48,60 @@ class BarangController extends ParentControllers
 	 */
 	public function actionCreate()
 	{
-		$model=new Barang;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Barang']))
-		{
-			$model->attributes=$_POST['Barang'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
+		$sla = new Barang();
+        $sladetails = array(new DetailBarang);
+ 
+        if (isset($_POST['Barang'])) {
+            $sla->attributes = $_POST['Barang'];
+ 
+            /**
+             * creating an array of sladetail objects
+             */
+            if (isset($_POST['DetailBarang'])) {
+                $sladetails = array();
+                foreach ($_POST['DetailBarang'] as $key => $value) {
+                    /*
+                     * sladetail needs a scenario wherein the fk sla_id
+                     * is not required because the ID can only be
+                     * linked after the sla has been saved
+                     */
+                    $sladetail = new DetailBarang('batchSave');
+                    $sladetail->attributes = $value;
+                    $sladetails[] = $sladetail;
+                }
+            }
+            /**
+             * validating the sla and array of sladetail
+             */
+            $valid = $sla->validate();
+            foreach ($sladetails as $sladetail) {
+                $valid = $sladetail->validate() & $valid;
+            }
+ 
+            if ($valid) {
+                $transaction = $sla->getDbConnection()->beginTransaction();
+                try {
+                    $sla->save();
+                    $sla->refresh();
+ 
+                    foreach ($sladetails as $sladetail) {
+                        $sladetail->id_barang = $sla->id;
+                        $sladetail->save();
+                    }
+                    $transaction->commit();
+                } catch (Exception $e) {
+                    $transaction->rollback();
+                }
+ 
+ 
+ 
+                $this->redirect(array('view', 'id' => $sla->id));
+            }
+        }
+        $this->render('create', array(
+            'sla' => $sla,
+            'sladetails' => $sladetails
+        ));
 	}
 
 	/**
@@ -60,21 +111,68 @@ class BarangController extends ParentControllers
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Barang']))
-		{
-			$model->attributes=$_POST['Barang'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
+		$sla = $this->loadModel($id);
+        $sladetails = $sla->details;
+ 
+        if (isset($_POST['Barang'])) {
+            $sla->attributes = $_POST['Barang'];
+ 
+            if (isset($_POST['DetailBarang'])) {
+                $sladetails = array();
+                foreach ($_POST['Barang'] as $key => $value) {
+                    /**
+                     * here we will take advantage of the updateType attribute so
+                     * that we will be able to determine what we want to do 
+                     * to a specific row
+                     */
+ 
+                    if ($value['updateType'] == DynamicTabularForm::UPDATE_TYPE_CREATE)
+                        $sladetails[$key] = new DetailBarang();
+ 
+                    else if ($value['updateType'] == DynamicTabularForm::UPDATE_TYPE_UPDATE)
+                        $sladetails[$key] = DetailBarang::model()->findByPk($value['id']);
+ 
+                    else if ($value['updateType'] == DynamicTabularForm::UPDATE_TYPE_DELETE) {
+                        $delete = DetailBarang::model()->findByPk($value['id']);
+                        if ($delete->delete()) {
+                            unset($sladetails[$key]);
+                            continue;
+                        }
+                    }
+                    $sladetails[$key]->attributes = $value;
+                }
+            }
+ 
+            $valid = $sla->validate();
+            foreach ($sladetails as $sladetail) {
+                $valid = $sladetail->validate() & $valid;
+            }
+ 
+            if ($valid) {
+                $transaction = $sla->getDbConnection()->beginTransaction();
+                try {
+                    $sla->save();
+                    $sla->refresh();
+ 
+                    foreach ($sladetails as $sladetail) {
+                        $sladetail->sla_id = $sla->id;
+                        $sladetail->save();
+                    }
+                    $transaction->commit();
+                } catch (Exception $e) {
+                    $transaction->rollback();
+                }
+ 
+ 
+ 
+                $this->redirect(array('view', 'id' => $sla->id));
+            }
+        }
+ 
+        $this->render('create', array(
+            'sla' => $sla,
+            'sladetails' => $sladetails
+        ));
 	}
 
 	/**

@@ -11,7 +11,7 @@ Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
-	'theme'=>'bootstrap',
+//	'theme'=>'bootstrap',
 	
 	
 
@@ -25,6 +25,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
 		'bootstrap.helpers.*',
+		'ext.DynamicTabularForm.*'
 		
 	),
 
